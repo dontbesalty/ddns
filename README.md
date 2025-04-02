@@ -20,7 +20,16 @@ This script checks your current public IP address and updates a specified Cloudf
 
 ## Configuration
 
-Create a file named `.env` in the same directory as the `update_cloudflare_dns.sh` script. Add the following variables, replacing the placeholder values with your actual details:
+Configuration is loaded from a `.env` file located in the same directory as the script. This file is ignored by Git (see `.gitignore`) to prevent accidental exposure of secrets.
+
+To configure the script:
+1.  Copy the example configuration file:
+    ```bash
+    cp .env.example .env
+    ```
+2.  Edit the newly created `.env` file and replace the placeholder values with your actual details.
+
+**`.env` file variables:**
 
 ```dotenv
 # Cloudflare Settings
@@ -52,8 +61,12 @@ PUSHOVER_API_TOKEN="YOUR_PUSHOVER_API_TOKEN"
 
 ## Setup
 
-1.  **Clone/Download:** Get the `update_cloudflare_dns.sh` script and place it in your desired directory.
-2.  **Configure:** Create and populate the `.env` file in the same directory as described above.
+1.  **Clone/Download:** Get the script files (`update_cloudflare_dns.sh`, `.env.example`, `.gitignore`).
+2.  **Configure:** Copy `.env.example` to `.env` and fill in your details as described in the Configuration section.
+    ```bash
+    cp .env.example .env
+    # Now edit .env with your favorite editor
+    ```
 3.  **Make Executable:** Open your terminal in the script's directory and run:
     ```bash
     chmod +x update_cloudflare_dns.sh
