@@ -20,7 +20,7 @@ This script checks your current public IP address and updates a specified Cloudf
 
 ## Configuration
 
-Configuration is loaded from a `.env` file located in the same directory as the script. This file is ignored by Git (see `.gitignore`) to prevent accidental exposure of secrets.
+Configuration is loaded from a `.env` file located in the same directory as the script. 
 
 To configure the script:
 1.  Copy the example configuration file:
@@ -59,28 +59,20 @@ PUSHOVER_API_TOKEN="YOUR_PUSHOVER_API_TOKEN"
 *   **User Key:** Log in to Pushover, your User Key is displayed on the dashboard.
 *   **API Token:** Register an application on the Pushover site to get an API Token/Key for your script.
 
-## Setup
+## Usage
 
-1.  **Clone/Download:** Get the script files (`update_cloudflare_dns.sh`, `.env.example`, `.gitignore`).
-2.  **Configure:** Copy `.env.example` to `.env` and fill in your details as described in the Configuration section.
-    ```bash
-    cp .env.example .env
-    # Now edit .env with your favorite editor
-    ```
-3.  **Make Executable:** Open your terminal in the script's directory and run:
+1.  **Make Executable:** Open your terminal in the script's directory and run:
     ```bash
     chmod +x update_cloudflare_dns.sh
     ```
 
-## Usage
+2. Run the script directly from your terminal:
 
-Run the script directly from your terminal:
+    ```bash
+    ./update_cloudflare_dns.sh
+    ```
 
-```bash
-./update_cloudflare_dns.sh
-```
-
-Check the log file (`~/Library/Logs/ddns_update.log`) for detailed output.
+    Check the log file (`~/Library/Logs/ddns_update.log`) for detailed output.
 
 ## Scheduling (Example: Cron)
 
